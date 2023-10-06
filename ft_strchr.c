@@ -1,29 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/08 17:22:06 by juitz             #+#    #+#             */
-/*   Updated: 2023/09/26 14:28:08 by juitz            ###   ########.fr       */
+/*   Created: 2023/09/08 17:49:11 by juitz             #+#    #+#             */
+/*   Updated: 2023/09/26 14:21:38 by juitz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include "printf.h"
 
-int	ft_tolower(int c)
+char	*ft_strchr(const char *str, int c)
 {
-	if (c >= 65 && c <= 90)
-		c = (c + 32);
-	return (c);
+	while (*str != '\0')
+	{
+		if (*str == (unsigned char)c)
+			return ((char *)str);
+		str++;
+	}
+	if ((char)c == '\0')
+		return ((char *)str);
+	return (NULL);
 }
 /*
-int main(void)
+int	main(void)
 {
-    int c = '7';
+	const char	*str = "Des wird scho";
+	char *first_w = ft_strchr(str, 'w');
 
-    printf ("%c", ft_tolower(c));
+	printf ("%s\n", first_w);
 }
 */

@@ -1,29 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   testmain.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/08 17:22:06 by juitz             #+#    #+#             */
-/*   Updated: 2023/09/26 14:28:08 by juitz            ###   ########.fr       */
+/*   Created: 2023/10/06 10:49:49 by codespace         #+#    #+#             */
+/*   Updated: 2023/10/06 11:14:44 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include "printf.h"
+#include <stdio.h>
 
-int	ft_tolower(int c)
-{
-	if (c >= 65 && c <= 90)
-		c = (c + 32);
-	return (c);
-}
-/*
 int main(void)
 {
-    int c = '7';
-
-    printf ("%c", ft_tolower(c));
+    printf("%u", -4);
 }
-*/

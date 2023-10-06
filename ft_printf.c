@@ -3,28 +3,59 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 13:54:07 by juitz             #+#    #+#             */
-/*   Updated: 2023/10/05 18:33:02 by juitz            ###   ########.fr       */
+/*   Updated: 2023/10/06 11:46:14 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
 
-void	handle_inputs(char c)
+static int	check_type(const char *inputs void *arg)
 {
-	if ()
+	int	i;
+
+	i = 0;
+	if (!inputs)
+		return(-1);
+	else if	(*inputs == 'c')
+		i += ft_putchar_fd((int)arg, 1);
+	else if	(*inputs == 's')
+		i += ft_strlen((char *)arg, 1);
+	else if (*inputs == 'd' || *inputs == 'i')
+		i += ft_putnbr_fd((int)arg, 1);
+	else if (*inputs == 'u')
+
+	else if (*inputs == 'p')
+
+	else if (*inputs == 'x')
+
+	else if (*inputs == 'X')
+
+	else if (*inputs == '%')
+		i += ft_putchar_fd(('%', 1)
+	return (i);
 }
 
-int ft_printf(const char *format, ...)
+int ft_printf(const char *inputs, ...)
 {
-	va_list	inputs;
-	va_start(inputs, format);
+	va_list	args;
+	unsigned int	i;
 
+	i = 0;
+	va_start(args, inputs);
 
+	while (*inputs)
+		if (*inputs == '%')
+			i++;
+			if (ft_strchr("cspdiuxX%", inputs))
+				i += check_type(inputs, va_arg(args, void *));
+	va_end(args);
+	return (i);
 }
+
 int	main(void)
 {
-	ft_printf(0);
+	ft_printf("%s", "Hello");
 }

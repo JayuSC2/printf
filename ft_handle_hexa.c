@@ -1,29 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_handle_hexa.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/08 17:22:06 by juitz             #+#    #+#             */
-/*   Updated: 2023/09/26 14:28:08 by juitz            ###   ########.fr       */
+/*   Created: 2023/10/06 11:46:20 by codespace         #+#    #+#             */
+/*   Updated: 2023/10/06 11:47:01 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include "printf.h"
 
-int	ft_tolower(int c)
-{
-	if (c >= 65 && c <= 90)
-		c = (c + 32);
-	return (c);
-}
-/*
-int main(void)
-{
-    int c = '7';
-
-    printf ("%c", ft_tolower(c));
-}
-*/
+int ft_handle_hexa()

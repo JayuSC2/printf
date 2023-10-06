@@ -1,29 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/08 17:22:06 by juitz             #+#    #+#             */
-/*   Updated: 2023/09/26 14:28:08 by juitz            ###   ########.fr       */
+/*   Created: 2023/09/05 18:34:22 by juitz             #+#    #+#             */
+/*   Updated: 2023/09/26 14:24:28 by juitz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include "printf.h"
+#include <stddef.h>
 
-int	ft_tolower(int c)
+size_t	ft_strlen(const char *str)
 {
-	if (c >= 65 && c <= 90)
-		c = (c + 32);
-	return (c);
+	size_t	i;
+
+	i = 0;
+	while (str[i] != '\0')
+		i++;
+	return (i);
 }
 /*
-int main(void)
+int	main(void)
 {
-    int c = '7';
+	char str[] = "I got this!";
 
-    printf ("%c", ft_tolower(c));
+	printf ("%ld", ft_strlen(str));
 }
 */

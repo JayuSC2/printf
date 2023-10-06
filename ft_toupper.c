@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include <stddef.h>
-#include "libft.h"
+#include "printf.h"
 
 int	ft_toupper(int c)
 {
