@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 13:54:07 by juitz             #+#    #+#             */
-/*   Updated: 2023/10/06 11:46:14 by codespace        ###   ########.fr       */
+/*   Updated: 2023/10/09 12:10:29 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ static int	check_type(const char *inputs void *arg)
 	else if (*inputs == 'X')
 
 	else if (*inputs == '%')
-		i += ft_putchar_fd(('%', 1)
+		i += ft_putchar_fd('%', 1)
 	return (i);
 }
 
