@@ -1,19 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/19 19:44:07 by juitz             #+#    #+#             */
-/*   Updated: 2023/10/09 13:46:33 by codespace        ###   ########.fr       */
+/*   Created: 2023/09/19 19:46:03 by juitz             #+#    #+#             */
+/*   Updated: 2023/10/10 12:18:16 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include "printf.h"
 
-void	ft_putchar_fd(char c, int fd)
+void	ft_putstr(char *s)
 {
-		(write(fd, &c, 1));
+	unsigned int	counter;
+	
+	counter = 0;
+	if (s != 0)
+	*counter += write (1, s, ft_strlen(s));
 }

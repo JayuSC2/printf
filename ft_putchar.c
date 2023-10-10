@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/19 19:46:03 by juitz             #+#    #+#             */
-/*   Updated: 2023/09/21 11:57:27 by juitz            ###   ########.fr       */
+/*   Created: 2023/09/19 19:44:07 by juitz             #+#    #+#             */
+/*   Updated: 2023/10/10 15:44:25 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include "printf.h"
 
-void	ft_putstr_fd(char *s, int fd)
+void	ft_putchar(char c, unsigned int counter)
 {
-	if (s != 0)
-		write (fd, s, ft_strlen(s));
+		counter = 0;
+		*counter += (write(1, &c, 1));
 }

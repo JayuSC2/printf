@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 10:48:40 by codespace         #+#    #+#             */
-/*   Updated: 2023/10/10 07:07:58 by codespace        ###   ########.fr       */
+/*   Updated: 2023/10/10 14:45:05 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,6 @@ void	ft_print_unsigned (unsigned int n)
 #include <stdio.h>
 int main(void)
 {
-    ft_print_unsigned(-4);
+    //ft_print_unsigned(-4);
 	printf("%u",-4);
 }

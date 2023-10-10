@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   printf.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 15:48:49 by juitz             #+#    #+#             */
-/*   Updated: 2023/10/05 15:55:10 by juitz            ###   ########.fr       */
+/*   Updated: 2023/10/10 15:37:34 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,10 @@
 #include <unistd.h>
 #include <stdarg.h>
 
-void	ft_putnbr_fd(int n, int fd);
-void	ft_putchar_fd(char c, int fd);
-void	ft_putstr_fd(char *s, int fd);
+void	ft_putnbr(int n, int fd);
+void	ft_putchar(char c, int fd);
+void	ft_putstr(char *s, int fd);
+int     ft_print_hexa(unsigned int num, const char format)
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 
