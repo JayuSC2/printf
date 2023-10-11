@@ -1,25 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_print_pointer.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/19 19:46:03 by juitz             #+#    #+#             */
-/*   Updated: 2023/10/11 13:14:49 by codespace        ###   ########.fr       */
+/*   Created: 2023/10/10 15:55:38 by codespace         #+#    #+#             */
+/*   Updated: 2023/10/11 13:04:18 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "printf.h"
 
-int	ft_putstr(char *s)
+static int  *pointer_len(int num)
 {
-	if (s != 0)
-	return (write (1, s, ft_strlen(s)));
+    unsigned int    counter;
+    
+    while (num != 0)
+    {
+        num /= 16;
+        counter++;
+    }
+    return(counter);
 }
-int	main(void)
+int print_pointer(unsigned long address, int strlen)
 {
-	char str[] = "Hello";
-	ft_putstr(str);
+    
 }

@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 13:54:07 by juitz             #+#    #+#             */
-/*   Updated: 2023/10/10 15:51:59 by codespace        ###   ########.fr       */
+/*   Updated: 2023/10/11 13:07:22 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,18 +26,15 @@ static int	check_type(const char *inputs void *arg)
 	else if (*inputs == 'd' || *inputs == 'i')
 		counter += ft_putnbr((int)arg, 1);
 	else if (*inputs == 'u')
-		counter += ft_print_unsigned((unsigned int)arg, 1)
-
+		counter += ft_print_unsigned((unsigned int)arg, 1);
 	else if (*inputs == 'p')
-
+		counter += ft_print_pointer((unsigned long)arg, 1);
 	else if (*inputs == 'x')
-		counter += ft_print_hexa((unsigned int)arg, 1)
-
+		counter += ft_print_hexa((unsigned int)arg, 1);
 	else if (*inputs == 'X')
-		counter += ft_print_hexa((unsigned int)arg, 1)
-
+		counter += ft_print_hexa((unsigned int)arg, 1);
 	else if (*inputs == '%')
-		counter += ft_putchar('%', 1)
+		counter += ft_putchar(1, '%', 1);
 	return (counter);
 }
 
@@ -61,4 +58,5 @@ int ft_printf(const char *inputs, ...)
 int	main(void)
 {
 	ft_printf("%s", "Hello");
+	printf("%s", "Hello");
 }
