@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 17:49:11 by juitz             #+#    #+#             */
-/*   Updated: 2023/09/26 14:21:38 by juitz            ###   ########.fr       */
+/*   Updated: 2023/10/11 13:49:20 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_strchr(const char *str, int c)
 		return ((char *)str);
 	return (NULL);
 }
-/*
+/* 
 int	main(void)
 {
 	const char	*str = "Des wird scho";
@@ -32,4 +32,4 @@ int	main(void)
 
 	printf ("%s\n", first_w);
 }
-*/
+ */
