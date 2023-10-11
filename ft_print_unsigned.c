@@ -6,32 +6,39 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 10:48:40 by codespace         #+#    #+#             */
-/*   Updated: 2023/10/11 14:49:16 by codespace        ###   ########.fr       */
+/*   Updated: 2023/10/11 16:25:55 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include "printf.h"
 
-void	ft_print_unsigned (unsigned int n)
+int	ft_print_unsigned (unsigned int n, int *counter)
 {
-	char	ch;
+	char	nb;
 
 	if (n >= 0 && n < 10)
 	{
-		ch = n + '0';
-		write(1, &ch, 1);
+		nb = n + '0';
+		write(1, &nb, 1);
+		*counter = *counter + 1;
 	}
 	if (n >= 10 && n <= 4294967295)
 	{
-		ft_print_unsigned(n / 10);
-		ft_print_unsigned(n % 10);
+		ft_print_unsigned(n / 10, counter);
+		ft_print_unsigned(n % 10, counter);
 	}
+	return (*counter);
 }
 
-#include <stdio.h>
+/* #include <stdio.h>
 int main(void)
 {
-    //ft_print_unsigned(-4);
+	int	counter = 0;
+	
+    ft_print_unsigned(-4, &counter);
+	printf("%s", "\n");
+	printf("%d", counter);
+	printf("%s", "\n");
 	printf("%u",-4);
-}
+} */
