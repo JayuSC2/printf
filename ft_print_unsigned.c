@@ -6,14 +6,14 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 10:48:40 by codespace         #+#    #+#             */
-/*   Updated: 2023/10/11 16:25:55 by codespace        ###   ########.fr       */
+/*   Updated: 2023/10/16 11:50:04 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include "printf.h"
 
-int	ft_print_unsigned (unsigned int n, int *counter)
+int	ft_print_unsigned(unsigned int n, unsigned int *counter)
 {
 	char	nb;
 

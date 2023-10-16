@@ -6,55 +6,56 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 13:54:07 by juitz             #+#    #+#             */
-/*   Updated: 2023/10/11 15:18:43 by codespace        ###   ########.fr       */
+/*   Updated: 2023/10/16 13:41:00 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
+#include <stdarg.h>
 
-static int	check_type(char *format, va_list args)
+static int	check_type(const char *format, va_list args)
 {
-	int	counter;
+	unsigned int	counter;
 
 	counter = 0;
 	if (!format)
 		return(-1);
 	else if	(*format == 'c')
-		counter += ft_putchar(va_arg(arg, int));
+		ft_putchar(va_arg(args, int));
 	else if	(*format == 's')
-		counter += ft_strlen((char *)arg);
+		ft_putstr(va_arg(args, char *));
 	else if (*format == 'd' || *format == 'i')
-		counter += ft_putnbr((int)arg, 1);
+		ft_printnbr(va_arg(args, int), &counter);
 	else if (*format == 'u')
-		counter += ft_print_unsigned((unsigned int)arg);
-	else if (*format == 'p')
-		counter += ft_print_pointer((unsigned long)arg);
-	else if (*format == 'x')
-		counter += ft_print_hexa((unsigned int)arg);
+		ft_print_unsigned(va_arg(args, unsigned int), &counter);
+	// else if (*format == 'p')
+	// 	counter += ft_print_pointer((unsigned long)args);
+	/* else if (*format == 'x')
+		counter += ft_print_hexa(va_arg(args, unsigned int));
 	else if (*format == 'X')
-		counter += ft_print_hexa((unsigned int)arg);
+		counter += ft_print_hexa(va_arg(args, unsigned int));
 	else if (*format == '%')
-		counter += ft_putchar(1, '%', 1);
+		counter += ft_putchar('%'); */
 	return (counter);
 }
 
-int ft_printf(const char *format, ...)
+int ft_printf(const char *str, ...)
 {
 	va_list	args;
 	unsigned int	counter;
-
+	
 	counter = 0;
-	va_start(args, format);
+	va_start(args, str);
 
-	while (*format)
-		if (*format == '%')
+	while (*str)
+		if (*str == '%')
 			counter++;
-			if (ft_strchr("cspdiuxX%", format))
-				counter += check_type(format, args);
+			if (ft_strchr("cspdiuxX%",(char *)str))
+				counter += check_type(str, va_arg(args, void *));
 	va_end(args);
 	return (counter);
 }
-
+#include <stdio.h>
 int	main(void)
 {
 	ft_printf("%s", "Hello");
