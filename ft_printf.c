@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 13:54:07 by juitz             #+#    #+#             */
-/*   Updated: 2023/10/16 13:41:00 by codespace        ###   ########.fr       */
+/*   Updated: 2023/10/16 14:22:12 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,14 +43,14 @@ int ft_printf(const char *str, ...)
 {
 	va_list	args;
 	unsigned int	counter;
-	
+
 	counter = 0;
 	va_start(args, str);
 
 	while (*str)
 		if (*str == '%')
 			counter++;
-			if (ft_strchr("cspdiuxX%",(char *)str))
+			if (ft_strchr("cspdiuxX%", *str))
 				counter += check_type(str, va_arg(args, void *));
 	va_end(args);
 	return (counter);

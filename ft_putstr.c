@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 19:46:03 by juitz             #+#    #+#             */
-/*   Updated: 2023/10/11 13:55:18 by codespace        ###   ########.fr       */
+/*   Updated: 2023/10/16 14:22:48 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,16 @@
 
 int	ft_putstr(char *s)
 {	
+	if (!s)
+		return (write(1, "(null)", 6));
 	if (s != 0)
-	write (1, s, ft_strlen(s));
-	return (ft_strlen(s));
+		write (1, s, ft_strlen(s));
+		return (ft_strlen(s));
 }
+
 /* int	main(void)
 {
-	char str[] = "Hello\n";
+	char str[] = "";
 	ft_putstr(str);
-} */
+} 
+ */
