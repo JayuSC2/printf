@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 11:46:20 by codespace         #+#    #+#             */
-/*   Updated: 2023/10/16 12:10:24 by codespace        ###   ########.fr       */
+/*   Updated: 2023/10/17 14:06:16 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 static int    *hex_len(int num)
 {
-    unsigned int counter;
+    int counter;
 
     while (num != 0)
     {
          num /= 16;
          counter++;
     }
-    return (*counter);
+    return (counter);
 }
 
 void    *ft_put_hexa(unsigned int num, const char lower_upper)
