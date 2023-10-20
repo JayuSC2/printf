@@ -3,44 +3,48 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_unsigned.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
+/*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 10:48:40 by codespace         #+#    #+#             */
-/*   Updated: 2023/10/18 16:33:17 by codespace        ###   ########.fr       */
+/*   Updated: 2023/10/19 15:26:07 by juitz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include "printf.h"
 
-int	unsigned_length(unsigned int num)
+int	unsigned_len(unsigned int num)
 {
 	int	counter;
 	
 	counter = 0;
-	while (num / 10)
+	while (num > 0)
 	{
-		n /= 10
-		counter++
+		num /= 10;
+		counter++;
 	}
 	return (counter);
 }
-int	ft_put_unsigned(unsigned int n)
+void	ft_put_unsigned(unsigned int n)
 {
 	char	nb;
 
-	if (n >= 0 && n < 10)
+	if (n < 10)
 	{
 		nb = n + '0';
 		write(1, &nb, 1);
-		*counter = *counter + 1;
 	}
-	if (n >= 10 && n <= 4294967295)
+	else if (n <= 4294967295)
 	{
 		ft_print_unsigned(n / 10);
 		ft_print_unsigned(n % 10);
 	}
-	return (counter);
+}
+
+int ft_print_unsigned(unsigned int n)
+{
+	ft_put_unsigned(n);
+	return (unsigned_len(n));
 }
 
 /* int	ft_print_unsigned(unsigned int n, unsigned int *counter)
