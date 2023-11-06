@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
+/*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 19:44:07 by juitz             #+#    #+#             */
-/*   Updated: 2023/10/17 16:28:29 by codespace        ###   ########.fr       */
+/*   Updated: 2023/10/23 14:56:32 by juitz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include "printf.h"
+#include "ft_printf.h"
 
 int	ft_putchar(int c)
 {
-		write(1, &c, 1);
-		return (1);
+	write(1, &c, 1);
+	return (1);
 }

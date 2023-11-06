@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printnbr.c                                        :+:      :+:    :+:   */
+/*   ft_printnbr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
+/*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 10:22:19 by juitz             #+#    #+#             */
-/*   Updated: 2023/10/16 09:42:10 by codespace        ###   ########.fr       */
+/*   Updated: 2023/10/23 14:56:19 by juitz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include "printf.h"
+#include "ft_printf.h"
 
 int	nbr_len(int num)
 {
 	int	counter;
 
 	counter = 0;
+	if (num == -2147483648)
+		return (11);
 	if (num == 0)
 		return (1);
 	if (num < 0)
@@ -33,11 +35,11 @@ int	nbr_len(int num)
 	return (counter);
 }
 
-int	ft_putnbr(int n)
+void	ft_putnbr(int n)
 {
 	char	nb;
-	
-	if (n < 0 && n >= -2147483648)
+
+	if (n < 0 && n > -2147483648)
 	{
 		write(1, "-", 1);
 		n *= -1;
@@ -55,7 +57,6 @@ int	ft_putnbr(int n)
 	if (n == -2147483648)
 	{
 		write(1, "-2147483648", 11);
-		return (11);
 	}
 }
 
@@ -99,7 +100,7 @@ int	main(void)
 {
 	int	counter = 0;
 	
-	/* ft_printnbr (2147483647, &counter);
+	ft_printnbr (2147483647, &counter);
 	write (1, "\n", 1);
 	printf("%d", counter);
 	ft_printnbr (-100, &counter);
